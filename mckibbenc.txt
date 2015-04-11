@@ -1,0 +1,13 @@
+git clone = clones a repository, either local or remote, to the specified directory.
+
+git add = adds a new file to the staging area
+
+git commit = commits changes to a file to the specified branch, moving the file to the tracking area.
+
+git push = pushes tracked changes to the specified branch
+
+git pull = gets changes from the specified branch and puts them into the current working repo.
+
+The remote repository is one that is hosted on another computer.
+
+The local repository is one that is on your computer that you do all of your work on.
