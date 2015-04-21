@@ -1,0 +1,53 @@
+(ansible)(ENV)[mckibbenc@i136 ansible]$ curl --head 10.23.1.40
+HTTP/1.1 200 OK
+Date: Tue, 21 Apr 2015 01:59:19 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Last-Modified: Tue, 21 Apr 2015 01:54:34 GMT
+ETag: "2cf6-5143254090760"
+Accept-Ranges: bytes
+Content-Length: 11510
+Vary: Accept-Encoding
+Content-Type: text/html
+
+(ansible)(ENV)[mckibbenc@i136 ansible]$ 
+
+
+
+
+(ansible)(ENV)[mckibbenc@i136 ansible]$ nc -zv 10.23.1.40 80
+Connection to 10.23.1.40 80 port [tcp/http] succeeded!
+(ansible)(ENV)[mckibbenc@i136 ansible]$ 
+
+
+
+
+mckibbenc-ansible-5618baa6-4dac-4627-b0c9-93ada390fed8:~$ apachectl -V
+AH00557: apache2: apr_sockaddr_info_get() failed for mckibbenc-ansible-5618baa6-4dac-4627-b0c9-93ada390fed8
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.0.1. Set the 'ServerName' directive globally to suppress this message
+Server version: Apache/2.4.7 (Ubuntu)
+Server built:   Mar 10 2015 13:05:59
+Server's Module Magic Number: 20120211:27
+Server loaded:  APR 1.5.1-dev, APR-UTIL 1.5.3
+Compiled using: APR 1.5.1-dev, APR-UTIL 1.5.3
+Architecture:   64-bit
+Server MPM:     event
+  threaded:     yes (fixed thread count)
+    forked:     yes (variable process count)
+Server compiled with....
+ -D APR_HAS_SENDFILE
+ -D APR_HAS_MMAP
+ -D APR_HAVE_IPV6 (IPv4-mapped addresses enabled)
+ -D APR_USE_SYSVSEM_SERIALIZE
+ -D APR_USE_PTHREAD_SERIALIZE
+ -D SINGLE_LISTEN_UNSERIALIZED_ACCEPT
+ -D APR_HAS_OTHER_CHILD
+ -D AP_HAVE_RELIABLE_PIPED_LOGS
+ -D DYNAMIC_MODULE_LIMIT=256
+ -D HTTPD_ROOT="/etc/apache2"
+ -D SUEXEC_BIN="/usr/lib/apache2/suexec"
+ -D DEFAULT_PIDLOG="/var/run/apache2.pid"
+ -D DEFAULT_SCOREBOARD="logs/apache_runtime_status"
+ -D DEFAULT_ERRORLOG="logs/error_log"
+ -D AP_TYPES_CONFIG_FILE="mime.types"
+ -D SERVER_CONFIG_FILE="apache2.conf"
+ubuntu@mckibbenc-ansible-5618baa6-4dac-4627-b0c9-93ada390fed8:~$ ls
