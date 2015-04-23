@@ -1,0 +1,1 @@
+heat stack-create --template-file mckibbenc_heat_ex2.yaml --parameters "key_name=mckibbenc-india-key" heat-wordpress-mckibbenc
